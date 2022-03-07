@@ -1,7 +1,13 @@
 {
   "name": "@jgarrow/spongebob-case",
   "version": "0.1.0",
+  "author": "Janessa Garrow",
+  "license": "MIT",
   "description": "JavaScript utility function to convert strings to Spongebob case",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgarrow/spongebob-case.git"
+  },
   "module": "dist/index.esm.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -13,10 +19,11 @@
     "test": "jest",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepublishOnly": "npm test && npm run lint"
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
-  "author": "Janessa Garrow",
-  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "esbuild": "^0.14.25",
