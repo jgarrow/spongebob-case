@@ -1,6 +1,6 @@
 {
   "name": "@jgarrow/spongebob-case",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Janessa Garrow",
   "license": "MIT",
   "description": "JavaScript utility function to convert strings to Spongebob case",
